@@ -1,0 +1,1 @@
+document.write("박종범은 바보")
