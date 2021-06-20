@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var today = new Date();
+        var nowYear = today.getFullYear();
+
+        var theDate =  new Date(nowYear,11,31);
+        //11은 월 -1 을 한거다. 즉, 12월 31일을 넣은 값이 11, 31 이다.
+        //올해 연말에 대한 날짜 정보 객체를 생성
+        var diffDate = theDate.getTime() - today.getTime();
+        //남은 날 = 특정 날짜 - 현재 날짜(밀리초 단위)
+        var result = Math.ceil(diffDate / (60 * 1000 * 60 * 24));
+        //(60 * 1000 * 60 * 24) -> 요일계산
+
+        document.write("연말 D-day: " + result +"일 남았습니다.");
+    </script>
+</body>
+</html>

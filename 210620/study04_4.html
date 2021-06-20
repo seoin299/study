@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //난수를 발생하여 원하는 구간 정수의 값 구하기
+        //Math.floor(Math.random()*(최댓값-최솟값+1))+최솟값;
+
+        var ran = Math.floor(Math.random()*31)+120;
+        // 120 ~ 150 사이의 정수 난수 값 발생
+        //document.write("랜덤값: " + ran  );
+
+        ////////////////////////////////////////////////////////
+
+        document.write("<h1>컴퓨터 가위,바위,보 맞추기</h1>");
+
+        var game = prompt("가위,바위,보 중 선택하세요?","가위");
+        var gameNum;
+        
+        switch(game){
+            case "가위":
+                gameNum = 1;break;
+            case "바위":
+                gameNum = 2;break;
+            case "보":
+                gameNum = 3;break;
+            default: alert("잘못 작성했습니다.");
+                location.reload();
+        }
+
+        var com = Math.ceil(Math.random()*3);
+
+        //document.write("<img src=\"images/math_img_"+com +".jpg"\">");
+        document.write(com);
+        if(gameNum == com) {
+            //document.write("<img src=\"images/game_1.jpg"\">");
+            document.write("<h1>잘 맞췄습니다 축하합니다!</h1>");
+        }else {
+            //document.write("<img src=\"images/game_2.jpg\">");
+            document.write("<h1>틀렸습니다 ㅜㅜ</h1>");
+        }
+
+
+    </script>
+</body>
+</html>
