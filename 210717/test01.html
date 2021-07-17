@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        for(let star = 1; star <= 5; star += 1 ){
+                console.log("*".repeat(star));
+        }
+
+
+        for(var star = 5; star >= 1; star -= 1 ){
+                console.log("*".repeat(star));
+        }
+
+
+        for(var star = 1; star <= 7; star += 2 ){
+                console.log("*".repeat(star));
+        }
+
+
+        for(var star = 9; star >= 1; star -= 2 ){
+                console.log(" ".repeat(9 - star )+"*".repeat(star));
+        }
+
+        // 역피라미드 : 앞에 공백계산식이 포인트
+        for(var star = 9; star >= 1; star -= 2 ){
+                console.log(" ".repeat((9 - star ) / 2) +"*".repeat(star));
+        }
+
+
+         // Math.abs , for문 한번 사용해서 마름모
+        for(var star = 5; star >= 1; star -= 2 ){
+                console.log((" ".repeat((5 - (star) ) / 2) +"*".repeat(star)));
+        }
+    </script>
+</body>
+</html>
